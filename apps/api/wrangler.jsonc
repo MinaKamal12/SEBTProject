@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "smart-finance-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-06-20",
+  "vars": {
+    "APP_BASE_URL": "http://localhost:5173",
+    "COOKIE_SECURE": "false"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "smart-finance-db",
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "assets": {
+    "directory": "../web/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  }
+}

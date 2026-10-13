@@ -1,0 +1,22 @@
+{
+  "name": "smart-finance-tracker",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev:api": "npm --workspace @smart-finance/api run dev",
+    "dev:web": "npm --workspace @smart-finance/web run dev",
+    "build": "npm --workspace @smart-finance/web run build",
+    "typecheck": "npm --workspace @smart-finance/api run typecheck && npm --workspace @smart-finance/web run typecheck",
+    "db:migrate:local": "npm --workspace @smart-finance/api run db:migrate:local",
+    "db:migrate:remote": "npm --workspace @smart-finance/api run db:migrate:remote",
+    "deploy:api": "npm --workspace @smart-finance/api run deploy",
+    "deploy": "npm run build && npm run deploy:api"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
