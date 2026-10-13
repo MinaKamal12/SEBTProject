@@ -11,7 +11,7 @@
     {
       "binding": "DB",
       "database_name": "smart-finance-db",
-      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+      "database_id": "2cd03022-be68-4d02-af2e-013b013239b4",
       "migrations_dir": "migrations"
     }
   ],
